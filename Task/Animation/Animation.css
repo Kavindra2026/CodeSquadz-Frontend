@@ -1,0 +1,150 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+
+div {
+  width: 150px;
+  height: 150px;
+  top: 50px;
+  text-align: center;
+  background-color: aquamarine;
+  animation: div 3s infinite linear alternate;
+
+}
+
+@keyframes div {
+  from {}
+
+  40% {
+    margin-left: 60%;
+    border-radius: 50%;
+  }
+
+  70% {
+    animation: name duration timing-functio 2s sation-count direction fill-mode;
+    margin-left: 90%;
+    border-radius: 10px;
+  }
+
+  100% {
+    margin-left: 100%;
+    border-radius: 10px;
+  }
+
+}
+
+h2 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  text-align: center;
+  font-size: 40px;
+  animation: h2 3s infinite linear alternate;
+}
+
+@keyframes h2 {
+
+
+  0% {}
+
+  20% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+
+  60% {
+    margin-left: 80%;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  70% {
+    margin-left: 90%;
+    background-color: blue;
+  }
+
+  100% {
+    margin-left: 100%;
+  }
+}
+
+
+
+h1 {
+  /* background-color: yellow; */
+  text-transform: uppercase;
+  color: transparent;
+  background-color: aquamarine;
+  /* background-image: url('https://www.northeasternchronicle.in/wp-content/uploads/2025/03/holi.jpg'); */
+  background-size: cover;
+  text-align: center;
+  font-size: 40px;
+  background-clip: text;
+  text-shadow: 5px 0px 1px black;
+  animation: h1 3s infinite linear alternate ease-in-out;
+}
+
+@keyframes h1 {
+  from {}
+
+  to {
+    background-position: bottom;
+  }
+}
+
+header {
+  align-items: center;
+  width: 1200px;
+  height: 500px;
+  overflow: hidden;
+}
+
+header>main {
+  width: 4800px;
+  height: 500px;
+  position: relative;
+  animation: gallery 10s infinite ease-in-out
+}
+
+header>main>img {
+  width: 1200px;
+  height: 500px;
+  float: left;
+}
+
+@keyframes gallery {
+  0% {
+    left: 0px
+  }
+
+  25% {
+    left: 0px
+  }
+
+  30% {
+    left: -1200px
+  }
+
+  50% {
+    left: -1200px
+  }
+
+  55% {
+    left: -2400px
+  }
+
+  75% {
+    left: -2400px
+  }
+
+  80% {
+    left: -3600px
+  }
+
+  100% {
+    left: -3600px
+  }
+}

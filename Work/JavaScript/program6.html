@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Offer Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f9;
+        }
+
+        .offer-letter {
+            background: #fff;
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #333;
+            margin: 0;
+        }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+        .details p {
+            margin: 5px 0;
+        }
+
+        .content {
+            margin-bottom: 30px;
+        }
+
+        .signature {
+            margin-top: 40px;
+        }
+
+        .signature p {
+            margin: 0;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="offer-letter">
+
+    </div>
+
+    <button type="button" onclick="changedata()">generate offer letter</button>
+
+
+    <script>
+
+        var jdata, jemail, jdi, jsal, jname;
+
+        function changedata() {
+            jdata = prompt("enter date");
+            jemail = prompt("enter email");
+            jdi = prompt("enter di");
+            jsal = prompt("enter sal");
+            jname = prompt("enter name");
+            var mytemp = document.querySelectorAll('.offer-letter');
+            mytemp[0].innerHTML = `<div class="header">
+    <h1>Offer Letter</h1>
+    <p>[Your Company Name]</p>
+  </div>
+
+  <div class="details">
+    <p><span class="bold">Date:</span> ${jdata}</p>
+    <p><span class="bold">To:</span> ${jname}</p>
+    <p><span class="bold">Email:</span> ${jemail}</p>
+  </div>
+
+  <div class="content">
+    <p>Dear John,</p>
+    <p>We are pleased to offer you the position of <strong>Software Engineer</strong> at [Your Company Name]. We were impressed with your background and skills, and we are excited to see the contributions you'll make to our team.</p>
+    <p>Your starting salary will be <strong>${jsal} per annum</strong> and you will report directly to the Head of Engineering. Your expected start date is <strong>May 1, 2025</strong>.</p>
+    <p>Please review the terms and conditions enclosed and confirm your acceptance by signing below.</p>
+  </div>
+
+  <div class="signature">
+    <p>Sincerely,</p>
+    <p><strong>Jane Smith</strong></p>
+    <p>HR Manager</p>
+  </div>
+
+  <br><br>
+
+  <div class="signature">
+    <p>__________________________</p>
+    <p>${jname} (Signature)</p>
+    <p>Date: ________________</p>
+  </div>`;
+
+        }
+    </script>
+
+</body>
+
+</html>

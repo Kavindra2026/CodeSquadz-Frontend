@@ -1,0 +1,41 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.row {
+	width: 1200px;
+	height: 300px;
+	border: 1px solid blue;
+}
+
+.row>section {
+	border: 10px solid red;
+	text-align: center;
+	float: left;
+	/* display: inline-block; */
+	width: 400px;
+	height: auto;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.row>section>img {
+	width: 100%;
+}
+
+.second {
+	width: 1200px;
+	height: 300px;
+	border: 1px solid orange;
+	float: none;
+	margin-top: 20px;
+	display: flex;
+}
+
+.second>section {
+	border: 5px solid red;
+	flex: 1;
+	padding: 10px;
+	margin: 10px;
+}

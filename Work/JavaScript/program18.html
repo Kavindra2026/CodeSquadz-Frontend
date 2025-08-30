@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 100px;
+        }
+
+        ul input {
+            padding: 5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li> <input type="text" placeholder="username"></li>
+        <li>
+            <p></p>
+        </li>
+        <li> <input type="button" value="login"></li>
+    </ul>
+
+
+    <script>
+        // function validfunc()
+        // {
+        //     let obj = document.querySelectorAll('input,p');
+        //     console.log(obj)
+        // }
+
+        var obj = document.querySelectorAll('input,p');
+        obj[0].addEventListener("input", () => {
+            var a = obj[0].value;
+            if (a.length >= 8) {
+                obj[1].style.color = "green";
+                obj[1].innerHTML = "strong";
+            }
+            else if (a.length >= 4) {
+                obj[1].style.color = "orange";
+                obj[1].innerHTML = "too sort";
+            }
+            else if (a.length == 0) {
+                obj[1].style.color = "red";
+                obj[1].innerHTML = "enter username";
+            }
+
+        })
+        obj[2].addEventListener("click", () => {
+            if (obj[0].value == "") {
+                obj[1].style.color = "red";
+                obj[1].innerHTML = "enter username";
+
+            }
+        })
+
+    </script>
+
+
+
+
+</body>
+
+</html>

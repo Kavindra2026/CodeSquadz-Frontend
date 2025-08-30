@@ -1,0 +1,83 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+:root
+{
+    --h:50px;
+}
+header,footer,.page
+{
+    border:1px solid red;
+}
+header
+{
+    height: var(--h);
+    background-color: lightgray;
+}
+.sidenav
+{
+    background-color: aquamarine;
+    height:90vh;
+    width: 55px;
+    float:left;
+    padding:5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition-duration: 200ms;
+
+}
+.main
+{
+    width: 95.8%;
+    height: 90vh;
+    background-color: lightgray;
+    float:right;
+    transition-duration: 200ms;
+}
+footer
+{
+    height: var(--h);
+    background-color: black;
+    color:white;
+}
+.page
+{
+    height: 90vh;
+}
+
+.sidenav ul
+{
+    list-style-type: none;
+}
+.sidenav ul li
+{
+    width: 200px;
+    /* background-color: orange; */
+    /* border:1px solid red; */
+    padding:8px 5px;
+    box-sizing: border-box;
+}
+.sidenav i
+{
+    margin:0 10px 0 10px;
+    font-size: 25px;
+}
+.sidenav:hover
+{
+    width: 200px;
+    transition-duration: 200ms;
+}
+.sidenav:hover + .main
+{
+    width: 85%;
+    transition-duration: 200ms;
+}
+
+.sidenav h3{
+    text-wrap-mode: nowrap;
+}
+.sidenav ul li:hover{
+    background-color: rgb(43, 75, 64);
+}

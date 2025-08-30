@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    div
+    {
+        width:0px;
+        height: 40px;
+        background-color: red;
+        color:white;
+        transition-duration: 200ms;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height:40px;
+
+    }
+ </style>
+
+</head>
+<body>
+    <div></div>
+    <h1>Time</h1>
+    
+<script>
+
+function mytime()
+{
+    var obj = document.querySelectorAll('h1,div');
+    var a = new Date();
+    var h = a.getHours();
+    var m = a.getMinutes();
+    var s = a.getSeconds();
+    var y = a.getFullYear();
+    var da = a.getDay();
+    var dac;
+        if(da==2)
+        {
+            dac = "Tue";
+        }
+    var myd = a.getTime();
+    obj[1].innerHTML =`${h}:${m}:${s} <p>${y} - ${dac}</p> <p>${myd}</p> `;
+    obj[0].style.width=`${s*20}px`;
+    obj[0].innerHTML=s;
+
+
+}
+
+mytime();
+setInterval("mytime()",1000);
+
+</script>
+
+
+
+</body>
+</html>

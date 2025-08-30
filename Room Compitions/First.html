@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Text one</h1>
+    <h1>Text two</h1>
+    <h1>Text three</h1>
+    <h1>Text four</h1>
+    <h1>Text five</h1>
+    <input type="text" placeholder="enter any thhing" />
+    <input type="button" value="click" onclick="change()" />
+    <input type="button" value="click 2" onclick="change2()" />
+    <script>
+      var ele = document.querySelectorAll("h1", "input");
+      function change() {
+        ele[0].innerText = "hello world";
+        ele[1].style.backgroundColor = "blue";
+      }
+      function change2() {
+        var btn = document.querySelectorAll("input");
+        btn[0].value = "Kavindra";
+        btn[0].style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>

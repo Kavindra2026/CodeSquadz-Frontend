@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: rgb(149, 218, 215);
+}
+
+main {
+  width: 1400px;
+  height: 700px;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  margin: 1%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sidebar>h2 {
+  padding-top: 5px;
+  text-align: center;
+  color: rgb(202, 28, 228);
+}
+
+.sidebar {
+  width: 220px;
+  height: 95vh;
+  background-color: var(--bg)
+}
+
+ul {
+  padding: 10px;
+  margin: 5px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li>a {
+  font-size: 22px;
+  margin-top: 5px;
+  color: rgb(202, 28, 228);
+}
+
+ul>a {
+  margin-top: 5px;
+  padding-left: 20px;
+  display: flex;
+  color: white;
+}
+
+.DownloadReport {
+  margin-left: 20px;
+  font-size: 22px;
+}
+
+.DownloadReport a {
+  color: rgb(202, 28, 228);
+}
+
+.download {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+/*------------------------------      Grid System       --------------------------------*/
+.chart {
+  width: 1180px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 300px 140px 150px 220px 300px;
+  grid-template-rows: 60px 60px 80px 10px 20px 20px 100px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.chart section {
+  border: 2px solid red;
+  border-radius: 10px;
+  background-color: var(--bg);
+}
+
+.chart>section:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 18px;
+}
+
+.chart>section:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+}
+
+.chart>section:nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+.chart>section:nth-child(4) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+
+.chart>section:nth-child(5) {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+
+.chart>section:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 8;
+
+}
+
+.chart>section:nth-child(7) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 8;
+  grid-row-end: 11;
+}
+
+
+.chart>section:nth-child(8) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 11;
+}
+
+.chart>section:nth-child(9) {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 7;
+  grid-row-end: 11;
+}
+
+/*-------------------------------      Grid Design        -------------------*/
+
+section>p {
+  padding-top: 20px;
+  text-align: center;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0 auto;
+        padding: 0;
+      } 
+
+      #popup {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+      }
+
+      #popup > section {
+        padding: 20px;
+        background-color: white;
+      }
+
+      #popup p {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        margin: -35px 0 0 119px;
+      }
+      body {
+        background-image: url("https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg");
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      Manish Bhatia (Java Consultant and Co-Founder of CodeSquadz) and Tanay
+      Kishore Mishra (Sr. AI and Data Science Consultant) work here, carrying
+      more than 20 years of teaching experience. CodeSquadz enables you to learn
+      and master all IT concepts from scratch, making them job-ready. Our
+      well-researched curriculum can get you ready to meet future challenges in
+      your IT career. Obtain an opportunity to work on live projects of an IT
+      company and obtain real-time experience to enhance your career. Get
+      assured placement support from our placement assistance team to grab a job
+      that matches your skill set, incluquality. Manish Bhatia (Java Consultant
+      and Co-Founder of CodeSquadz) and Tanay Kishore Mishra (Sr. AI and Data
+      Science Consultant) work here, carrying more than 20 years of teaching
+      experience. CodeSquadz enables you to learn and master all IT concepts
+      from scratch, making them job-ready. Our well-researched curriculum can
+      get you ready to meet future challenges in your IT career. Obtain an
+      opportunity to work on live projects of an IT company and obtain real-time
+      experience to enhance your career. Get assured placement support from our
+      placement assistance team to grab a job that matches your skill set,
+      incluquality. Manish Bhatia (Java Consultant and Co-Founder of CodeSquadz)
+      and Tanay Kishore Mishra (Sr. AI and Data Science Consultant) work here,
+      carrying more than 20 years Get assured placement support from our
+      placement assistance team to grab a job that matches your skill set, inclu
+    </p>
+    <div id="popup">
+      <section>
+        <p>X</p>
+        <h1>model page</h1>
+      </section>
+    </div>
+
+    <script>
+      var jsmodel, jsclose;
+      function jmodel() {
+        jsmodel = document.getElementById("popup");
+        jsclose = document.querySelectorAll("#popup p");
+        jsmodel.style.visibility = "visible";
+        console.log(jsclose);
+
+        jsclose[0].addEventListener("click", () => {
+          // jsmodel.style.visibility="hidden";
+          jsmodel.removeAttribute("style");
+        });
+      }
+
+      setTimeout("jmodel()", 5000);
+    </script>
+  </body>
+</html>

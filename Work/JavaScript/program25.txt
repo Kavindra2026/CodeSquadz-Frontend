@@ -1,0 +1,134 @@
+var jinput,jbox,jpage;
+var myarr = [10,80,70,"kumar"];
+
+function loadallhtmlelement()
+{
+    jinput = document.getElementById('user');
+    jbox = document.querySelectorAll("div,select");
+    jpage = document.querySelector('.page');
+    console.log(jbox);
+    displaydata();
+}
+loadallhtmlelement();
+
+
+function displaydata()
+{
+    jbox[1].innerHTML=`all data: ${myarr}`;
+    jbox[2].innerHTML=`Total Length: ${myarr.length}`;
+    console.log(myarr);
+}
+
+
+// function adddata()
+// {
+//     // myarr.push(jinput.value);
+//     myarr.unshift(jinput.value);
+//     console.log(myarr);
+//     displaydata();
+// }
+
+function adddata()
+{
+   if(jbox[0].value=="left")
+   {
+    myarr.unshift(jinput.value);
+   }
+   else if(jbox[0].value=="right")
+   {
+    myarr.push(jinput.value);
+   }
+   else
+   {
+    alert("please select direction to add data");
+   }
+   displaydata();
+}
+
+
+function removedata()
+{
+   if(jbox[0].value=="left")
+   {
+    myarr.shift(jinput.value);
+   }
+   else if(jbox[0].value=="right")
+   {
+    myarr.pop(jinput.value);
+   }
+   else
+   {
+    alert("please select direction to remove data");
+   }
+   displaydata();
+}
+
+function jsearch()
+{  var resultdata;
+    var searchvalue = jinput.value;
+    if(jbox[0].value=="left")
+    {
+     resultdata = myarr.indexOf(searchvalue);   
+    }
+    else if(jbox[0].value=="right")
+        {
+         resultdata = myarr.lastIndexOf(searchvalue);   
+        }
+    else
+    {
+        alert("please provide direction of search data");
+    }
+    jbox[3].innerHTML=`Index Of Data: ${resultdata}`;
+
+}
+
+function jsort()
+{
+    myarr.sort();
+    displaydata();
+}
+
+function jreverse()
+{
+    myarr.sort();
+    myarr.reverse();
+    displaydata();
+}
+
+function jjoin()
+{
+    var list=["ravi","mohan","sohan"];
+    // var joindata = myarr.join(list);
+    var joindata = myarr.join("500");
+    console.log(joindata);
+    jbox[1].innerHTML=joindata;
+    console.log(typeof(joindata));
+}
+
+function jconcat()
+{
+    var newdata = myarr.concat("singh",100,[50,60,30,70]);
+    console.log(newdata);
+
+}
+
+
+function jfilter()
+{
+    var searchdata = jinput.value;
+    var filterdata = myarr.filter((d)=>{
+        return d==searchdata
+    });
+    console.log(filterdata);
+}
+
+function jmap()
+{
+    var mydata = myarr.map((d)=>{
+        return `<main>${d}</main>`
+    });
+    jpage.innerHTML = mydata.join(" ");
+}
+
+
+

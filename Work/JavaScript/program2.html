@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        input,select
+        {
+            padding:5px;
+            margin:5px;
+                }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li> <input type="text" placeholder="first no" id="first"></li>
+        <li> <input type="text" placeholder="second no" id="second"></li>
+        <li> <select id="opt">
+            <option hidden>select operation</option>
+            <option>add</option>
+            <option>multi</option>
+            <option>div</option>
+            <option>sub</option>
+        </select></li>
+        <li> <input type="text" placeholder="result" id="result"></li>
+        <li> <input type="button" value="calculate" onclick="mycal()"></li>
+    </ul>
+
+    
+<script>
+    // function mycal()
+    // {
+    //     var myele = document.querySelectorAll('input,select');
+    //     console.log(myele);
+    //     if(myele[2].value=="add")
+    //     {
+    //         myele[3].value = parseInt(myele[0].value) + parseInt(myele[1].value);
+    //     }
+    //     else  if(myele[2].value=="sub")
+    //     {
+    //         myele[3].value =parseInt(myele[0].value) - parseInt(myele[1].value);
+    //     }
+    //     else  if(myele[2].value=="multi")
+    //     {
+    //         myele[3].value =parseInt(myele[0].value) * parseInt(myele[1].value);
+    //     }
+    //     else  if(myele[2].value=="div")
+    //     {
+    //         myele[3].value = parseInt(myele[0].value) / parseInt(myele[1].value);
+    //     }
+    //     else
+    //     {
+    //         alert("pleas select anyone operation");
+    //     }
+    //  }
+
+    // function mycal()
+    // {
+    //     var myele = document.querySelectorAll('input,select');
+    //     var first;
+    //     var second,result,opt;
+    //         first = parseInt(myele[0].value);
+    //         second = parseInt(myele[1].value);
+    //         opt = myele[2].value;
+    //         if(opt=="add")
+    //         {
+    //             result = first+second
+    //         }
+    //         else if(opt=="sub")
+    //         {
+    //             result = first-second
+    //         }
+    //         else if(opt=="multi")
+    //         {
+    //             result = first*second
+    //         }
+    //         else if(opt=="div")
+    //         {
+    //             result = first/second
+    //         }
+    //         else
+    //         {
+    //             alert("select option");
+    //         }
+    //         myele[3].value=result;
+    // }
+
+    function mycal()
+    {
+        var jfirst,jsecond,jopt,jresult;
+            jfirst = parseInt(document.getElementById('first').value);
+            jsecond = parseInt(document.getElementById('second').value);
+            jopt = document.getElementById('opt');
+            if(jopt.value=="add")
+            {
+                jresult = jfirst+jsecond;
+            }
+            else if(jopt.value=="multi")
+            {
+                jresult = jfirst*jsecond;
+            }
+            else if(jopt.value=="sub")
+            {
+                jresult = jfirst-jsecond;
+            }
+            else if(jopt.value=="div")
+            {
+                jresult = jfirst/jsecond;
+            }
+            else{
+                alert("select any opt");
+            }
+        document.getElementById('result').value=jresult;
+    }
+</script>
+
+</body>
+</html>

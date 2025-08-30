@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>time <span>0:0</span></h1>
+
+<input type="button" value="start" onclick="mystart()">
+
+
+
+<script>
+    var a=60;
+    var count;
+    var intervals;
+    function mystart()
+{
+    intervals=setInterval("cuntdown()",1000);
+
+}
+
+function cuntdown()
+{
+    count = document.querySelector('span');
+    count.innerHTML=a;
+    a--;
+
+}
+
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Time</h1>
+    
+<script>
+// var a = 50;
+// a = prompt("enter number");
+// console.log(a);
+
+// const a = 50;
+// a = prompt("enter number");
+// console.log(a);
+
+// let a = 50;
+// a = prompt("enter number");
+// console.log(a);
+
+
+// var a =new Date();
+// var d = a.getDay();
+// console.log(a);
+// console.log(typeof(a));
+// console.log(d);
+
+function mytime()
+{
+    var obj = document.querySelectorAll('h1');
+    var a = new Date();
+    var h = a.getHours();
+    var m = a.getMinutes();
+    var s = a.getSeconds();
+    var y = a.getFullYear();
+    var da = a.getDay();
+    var dac;
+        if(da==2)
+        {
+            dac = "Tue";
+        }
+    var myd = a.getTime();
+    obj[0].innerHTML =`${h}:${m}:${s} <p>${y} - ${dac}</p> <p>${myd}</p> `;
+}
+
+mytime();
+setInterval("mytime()",1000);
+
+</script>
+
+
+
+</body>
+</html>

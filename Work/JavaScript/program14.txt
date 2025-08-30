@@ -1,0 +1,21 @@
+var obj;
+function loadallobject()
+{
+    obj = document.querySelectorAll('input,p,img');
+    console.log(obj);
+
+    obj[0].addEventListener("input",()=>{
+
+        obj[3].style.width=`${obj[0].value}px`;
+    });
+
+
+    obj[1].addEventListener("input",()=>{
+        var a = obj[1].value;
+            obj[3].style.opacity=a/100;
+    })
+
+
+}
+
+loadallobject();

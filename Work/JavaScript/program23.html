@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="myobj()">
+    <h3>heading1</h3>
+    <h3>heading2</h3>
+    <h3>heading3</h3>
+    <h3>heading4</h3>
+    <h3>heading5</h3>
+    <h3>heading6</h3>
+    <h3>heading7</h3>
+    <h3>heading8</h3>
+    <h3>heading9</h3>
+    <h3>heading10</h3>
+
+
+
+    <script>
+        var obj;
+        function myobj() {
+            obj = document.querySelectorAll('h3');
+            let myscreen = screen;
+            console.log(myscreen);
+            obj[0].innerHTML = myscreen.height;
+            obj[1].innerHTML = myscreen.width;
+            obj[1].innerHTML = myscreen.orientation.type;
+            if (myscreen.width >= 1200) {
+                document.bgColor = "gray";
+            }
+            else if (myscreen.width >= 1000) {
+                document.bgColor = "green";
+            }
+            else {
+                document.bgColor = "orange";
+            }
+            
+
+
+        }
+        myobj();
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

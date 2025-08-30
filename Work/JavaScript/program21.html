@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: azure;
+            color: blueviolet;
+        }
+        input
+        {
+            background-color: orange;
+        }
+
+        .change
+        {
+            background-color: rgb(2, 47, 47);
+            color:white;
+        }
+        .change input
+        {
+            background-color: blueviolet;
+            padding:10px;
+            color:blue;
+        }
+        .change h1{
+            text-align: center;
+            text-transform: uppercase;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>
+    heading one
+</h1>
+<p>this is  text</p>
+
+<input type="button" value="change mode">
+
+
+<script>
+var jbody = document.querySelector('body');
+var btn = document.querySelector("input");
+
+btn.addEventListener("click",()=>{
+    jbody.classList.toggle('change');
+})
+
+
+</script>
+    
+</body>
+</html>

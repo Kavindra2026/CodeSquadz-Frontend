@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+
+      ul li {
+        width: 250px;
+        height: 50px;
+        text-align: center;
+        margin-left: 40px;
+      }
+
+      ul a {
+        line-height: 40px;
+        border-radius: 10px;
+        width: 100%;
+        height: 50px;
+        float: left;
+        background-color: yellow;
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the nav name" id="addnav" />
+    <span></span>
+    <input type="button" value="Add Item" onclick="menuadd()" id="addbtn" />
+    <input type="button" value="Remove Item" onclick="removenav()" />
+
+    <ul></ul>
+
+    <script>
+      var jspan = document.querySelectorAll("span");
+      var a = [];
+      function dynnavbar() {
+        var jnav = document.querySelector("ul");
+        var mynav = a.map((m) => {
+          return `<li><a href="">${m}</a></li> `;
+        });
+        console.log(mynav);
+        jnav.innerHTML = mynav.join(" ");
+        jspan[0].innerHTML = `Total Menu: ${a.length} `;
+      }
+      dynnavbar();
+
+      var jaddbtn;
+      function menuadd() {
+        const jmenu = document.getElementById("addnav");
+        jaddbtn = document.getElementById("addbtn");
+        a.push(jmenu.value);
+        jmenu.value = "";
+        dynnavbar();
+        btnaction();
+      }
+
+      function removenav() {
+        a.shift();
+        dynnavbar();
+        btnaction();
+      }
+
+      function btnaction() {
+        if (a.length >= 10) {
+          jaddbtn.setAttribute("disabled", "disabled");
+        } else {
+          jaddbtn.removeAttribute("disabled");
+        }
+      }
+    </script>
+  </body>
+</html>

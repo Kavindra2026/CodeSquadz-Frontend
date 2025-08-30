@@ -1,0 +1,18 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+.page
+{
+    padding:20px;
+}
+.page input
+{
+    display: inline-block;
+}
+img
+{
+    width: 200px;
+    
+}

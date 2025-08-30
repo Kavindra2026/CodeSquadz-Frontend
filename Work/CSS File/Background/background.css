@@ -1,0 +1,98 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+.solid
+{
+    width:1200px;
+    height: 400px;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    /* background-color: orange; */
+    /* background-color: #a0f5ef; */
+    /* background-color:rgb(100,150,200); */
+    background-color:rgb(30%,0%,0%);
+}
+
+.gradient
+{
+    width:1200px;
+    height: 400px;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    /* background:linear-gradient(orange 50%,green,red,blue); */
+    /* background:-webkit-linear-gradient(left,green,red,blue); */
+    background:-webkit-linear-gradient(50deg,green,red,blue);
+    /* background:-webkit-radial-gradient(left top,green,red,blue);
+    background:-ms-radial-gradient(left top,green,red,blue);
+    background:-moz-radial-gradient(left top,green,red,blue);
+    background:-o-radial-gradient(left top,green,red,blue); */
+}
+
+.bgimg
+{
+    width:1200px;
+    height: 500px;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    border:1px solid red;
+    background-image:url("https://i0.wp.com/www.corkbackpackers.ie/wp-content/uploads/2017/04/mountain-sunrise-wallpaper-10819-hd-wallpapers-200x200.jpg?ssl=1");
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-position: center 20%;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+
+}
+
+.imgwithcolor
+{
+    width:1200px;
+    height: 500px;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    border:1px solid red;
+    background:red url("https://i0.wp.com/www.corkbackpackers.ie/wp-content/uploads/2017/04/mountain-sunrise-wallpaper-10819-hd-wallpapers-200x200.jpg?ssl=1");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+
+}
+
+
+.tback
+{
+    width:1200px;
+    height: 500px;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    border:1px solid red;
+    background:red url("https://i0.wp.com/www.corkbackpackers.ie/wp-content/uploads/2017/04/mountain-sunrise-wallpaper-10819-hd-wallpapers-200x200.jpg?ssl=1");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right center;
+
+}
+.tback h1{
+    /* background-color: orangered;
+    opacity: 0.1; */
+    padding:50px;
+    background-color: rgba(255,100,150,0.5);
+    /* background-color: orange transparent; */
+    
+}
+.tback h2{
+    padding:50px;
+    background:linear-gradient(rgba(0,0,255,0.1),green);
+    margin:50px;
+    /* box-shadow: 2px 5px 5px white; */
+    /* box-shadow:inset 0px 0px 30px white; */
+    box-shadow: 0px 0px 0px 5px white,0px 0px 0px 10px lightgray,0px 0px 0px 15px gray,0px 0px 0px 20px black;
+    border-radius: 20px;
+    border-top-right-radius: 100px;
+}

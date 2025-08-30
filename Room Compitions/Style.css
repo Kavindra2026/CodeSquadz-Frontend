@@ -1,0 +1,70 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  margin: 20px;
+}
+
+body {
+  background-image: url("/image/back1.jpeg");
+  background-size: cover;
+}
+.name h2{
+  font-size: 40px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#more {
+  background-color: aqua;
+  padding: 5px;
+  font-size: 15px;
+  height: 40px;
+  width: 60px;
+  border-radius: 5px;
+
+}
+
+.linkbox {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linkbox:hover {
+ color: red;
+}
+
+.link {
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+
+
+.Contain {
+  font-size: 30px;
+  margin-top: 200px;
+}
+.Contain p{
+
+  font-size: 15px;
+  margin-top: -20px;
+}
+
+#Searchbar {
+  padding: 10px
+}
+
+input {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.SearchButton {
+  margin-left: -20px;
+  padding: 10px;
+  background-color: rgba(7, 234, 166, 0.499);
+}

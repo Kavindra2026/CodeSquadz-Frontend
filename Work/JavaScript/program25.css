@@ -1,0 +1,28 @@
+input,button,select
+{
+    padding:5px;
+    margin:5px;
+}
+.page
+{
+    width: 1200px;
+    height: auto;
+    border:1px solid red;
+    position: absolute;
+}
+.page main
+{
+    min-width: 100px;
+    max-width: fit-content;
+    height: 70px;
+    text-align: center;
+    font-weight: bold;
+    padding:20px;
+    box-sizing: border-box;
+    /* float: left; */
+    display: inline-block;
+    background-color: rgb(2, 51, 35);
+    color:white;
+    margin:5px;
+    position: relative;
+}

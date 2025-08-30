@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(123deg, #07078ff5, rgb(236, 91, 236));
+  width: 100%;
+  height: 100vh;
+
+  /* Vertical centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 30px;
+  width: 300px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#quote {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center; /* Center the text */
+  margin-bottom: 10px;
+}
+
+#quote::before,
+#quote::after {
+  content: '"';
+}
+
+#author {
+  font-size: 14px;
+  color: rgba(69, 69, 69, 1);
+  text-align: center; /* Center the author text */
+  margin-bottom: 15px;
+}
+
+#author::before {
+  content: '- ';
+}
+
+#btnGenerate {
+  background-color: rgb(133, 251, 133);
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnGenerate:hover {
+  transform: scale(0.9);
+}

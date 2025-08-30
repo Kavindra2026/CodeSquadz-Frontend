@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 100px;
+            width: 400px;
+            display: inline-block;
+            letter-spacing: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1></h1>
+<input type="image" src="https://cdn-icons-png.flaticon.com/512/17105/17105803.png" width="40" onclick="capgenerage()">
+
+<script>
+
+// function capgenerage()
+// {
+//     var c = Math;
+//     var jtext = document.querySelector('h1');
+//         // console.log(c);
+//         // console.log(typeof(c));
+//     // var cap = (Math.random()+1)* (Math.PI);
+//     var cap = parseInt((Math.random()+1)*4235);
+//     jtext.innerHTML = cap;
+//     console.log(cap);
+// }
+// capgenerage();
+
+
+// function capgenerage()
+// {
+//     var c = Math;
+//     var jtext = document.querySelector('h1');
+//     var cap = parseInt((Math.random()+1)*4235);
+//     var t;
+//         if(cap>=8000)
+//         {
+//             t="Y";
+//         }
+//         else if(cap>=6000)
+//         {
+//             t="P";
+//         }
+//         else if(cap>=5000)
+//         {
+//             t="A";
+//         }
+//         else
+//         {
+//             t="O";
+//         }
+//     var gcap = cap+t;
+//     jtext.innerHTML = gcap;
+//     console.log(gcap);
+// }
+// capgenerage();
+
+
+function capgenerage()
+{
+    var c = Math;
+    var jtext = document.querySelector('h1');
+    var cap = parseInt((Math.random()+1)*4235);
+    var t;
+        if(cap>=8000)
+        {
+            t="Y";
+        }
+        else if(cap>=6000)
+        {
+            t="P";
+        }
+        else if(cap>=5000)
+        {
+            t="A";
+        }
+        else
+        {
+            t="O";
+        }
+    var gcap;
+    if(cap>=6000)
+    {
+        gcap=cap+t;
+    }
+    else
+    {
+        gcap=t+cap;
+    }
+    
+    jtext.innerHTML = gcap;
+    console.log(gcap);
+}
+capgenerage();
+
+
+</script>
+
+</body>
+</html>

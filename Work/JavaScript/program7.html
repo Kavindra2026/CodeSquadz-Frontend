@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Offer Letter</title>
+  </head>
+
+  <body>
+    <input type="text" placeholder="username" />
+    <input type="button" value="change/add" onclick="abc()" />
+    <input type="button" value="removeAttr" onclick="removeattr()" />
+    <input type="button" value="getAttr" onclick="getdata()" />
+    <input type="button" value="toggle" onclick="toggleaction()" />
+
+    <script>
+      var obj;
+      function abc() {
+        obj = document.querySelectorAll("input");
+        obj[0].setAttribute("title", "userlist");
+        obj[0].setAttribute("maxlength", 40);
+        obj[0].setAttribute("type", "password");
+      }
+      function removeattr() {
+        obj[0].removeAttribute("title");
+      }
+
+      function getdata() {
+        var b = obj[0].getAttribute("type");
+        console.log(b);
+        if (b == "password") {
+          obj[0].setAttribute("type", "text");
+        }
+      }
+
+      var c = 1;
+      function toggleaction() {
+        if (c == 1) {
+          obj[0].setAttribute("type", "text");
+          c++;
+        } else {
+          obj[0].setAttribute("type", "password");
+          c = 1;
+        }
+      }
+    </script>
+  </body>
+</html>

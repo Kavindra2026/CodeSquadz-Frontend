@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: orangered;
+            color: white;
+            margin-left: 0;
+
+            animation: xyz1 3s infinite linear alternate;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        @keyframes xyz1 {
+            0% {}
+
+            40% {
+                margin-left: 1000px;
+                background-color: tomato;
+            }
+
+            60% {
+                margin-left: 1000px;
+                background-color: green;
+                border-radius: 30px;
+            }
+
+            100% {
+                margin-left: 1200px;
+            }
+        }
+
+        .first {
+            animation: abc 2s infinite alternate linear;
+        }
+
+        @keyframes abc {
+            0% {}
+
+            20% {
+                margin-left: 500px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-left: 1000px;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            text-transform: uppercase;
+            font-family: arial black;
+            background-image: url('https://www.northeasternchronicle.in/wp-content/uploads/2025/03/holi.jpg');
+            background-size: cover;
+            color: transparent;
+            background-position: top;
+            background-clip: text;
+            text-shadow: 5px 0px 3px black;
+            animation: heading 1s infinite alternate ease-in-out;
+        }
+
+        @keyframes heading {
+            from {}
+
+            to {
+                background-position: bottom;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+            animation: heading2 100ms infinite alternate;
+        }
+
+        @keyframes heading2 {
+            0% {
+                color: red
+            }
+
+            100% {
+                color: blue
+            }
+        }
+
+
+        header {
+            width: 1200px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        header>main {
+            width: 4800px;
+            height: 500px;
+            position: relative;
+            animation: gallery 10s infinite ease-in-out;
+        }
+
+        header>main>img {
+            width: 1200px;
+            height: 500px;
+            float: left;
+        }
+
+
+        @keyframes gallery {
+            0% {
+                left: 0px
+            }
+
+            25% {
+                left: 0px
+            }
+
+            30% {
+                left: -1200px
+            }
+
+            50% {
+                left: -1200px
+            }
+
+            55% {
+                left: -2400px
+            }
+
+            75% {
+                left: -2400px
+            }
+
+            80% {
+                left: -3600px
+            }
+
+            100% {
+                left: -3600px
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>animation</div>
+    <section class="box first"> box1</section>
+    <h1>background clip</h1>
+    <h2>blink text</h2>
+
+    <header>
+        <main>
+            <img src="https://www.northeasternchronicle.in/wp-content/uploads/2025/03/holi.jpg">
+            <img src="https://images.goodreturns.in/img/2025/03/happy-holi-2025600-1741728861.jpg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd4jhcEWPAI31X2yIGhsZRjheowYsBsagDXw&s">
+            <img src="https://www.northeasternchronicle.in/wp-content/uploads/2025/03/holi.jpg">
+            </main>
+    </header>
+
+
+</body>
+
+</html>

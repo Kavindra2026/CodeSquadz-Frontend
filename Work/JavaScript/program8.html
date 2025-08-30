@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this is number</h1>
+    <input type="button" value="submit" onclick="changevalue()" />
+    <button>submit1</button>
+    <button>submit2</button>
+    <button>submit3</button>
+    <button>submit4</button>
+    <script>
+      var obj;
+      var i = 1;
+      var mybtn = document.querySelectorAll("button");
+      function changevalue() {
+        obj = document.querySelectorAll("h1");
+        obj[0].innerHTML = i;
+        i++;
+      }
+      mybtn[0].addEventListener("click", changevalue);
+
+      mybtn[1].addEventListener("click", function () {
+        alert("welcome to ano func");
+      });
+      mybtn[2].addEventListener("click", () => {
+        alert("welcome to arrow function");
+      });
+    </script>
+  </body>
+</html>

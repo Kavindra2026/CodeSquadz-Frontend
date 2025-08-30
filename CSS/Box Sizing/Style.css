@@ -1,0 +1,23 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.row {
+  width: 1200px;
+  height: auto;
+  border: 2px solid rgb(169, 17, 17);
+}
+
+.row>section {
+  display: flex;
+  flex: 1;
+  width: 300px;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  border: 2px solid rgb(146, 106, 106);
+  background-color: aqua;
+}

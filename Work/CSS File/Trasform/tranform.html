@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        div
+        {
+            width:200px;
+            height: 200px;
+            background-color: orange;
+            text-align: center;
+            /* transform: rotate(50deg); */
+            /* transform: rotateY(180deg) rotate(20deg) ; */
+            /* transform: scale(0.2,0.2); */
+            /* transform: skew(-20deg); */
+            /* transform:translate(10px,50px); */
+            animation:abc 1s infinite alternate;
+        }
+@keyframes abc {
+     0%{}
+     100%{transform: scale(0.2,0.2) skew(20deg) translate(200px,100px) ;}
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div> use of transfrom</div>
+
+
+    
+</body>
+</html>

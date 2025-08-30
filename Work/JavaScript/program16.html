@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        ul input
+        {
+            padding:10px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> <input type="text" placeholder="username" id="user"></li>
+        <li> <input type="password" placeholder="password" id="pass"></li>
+        <li> <input type="button" value="login" disabled></li>
+    </ul>
+
+
+<script>
+
+var juser,jpass,alliput;
+
+    alliput =document.querySelectorAll('input');
+    alliput[0].addEventListener("input",()=>{
+        juser = alliput[0].value;
+        formvalidation();
+        
+    });
+
+    alliput[1].addEventListener("input",()=>{
+        jpass = alliput[1].value;
+        formvalidation();
+    });
+
+
+
+
+// function formvalidation()
+// {
+//     if (juser=="" && jpass=="") {
+//         alliput[2].setAttribute("disabled","disabled");
+//         }
+//         else
+//         {
+//             alliput[2].removeAttribute('disabled');
+//         }
+// }
+
+function formvalidation()
+{
+    if(juser.length==0 || jpass.length==0)
+{
+    alliput[2].setAttribute("disabled","disabled");
+}
+    else
+    {
+        alliput[2].removeAttribute('disabled');
+    }
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

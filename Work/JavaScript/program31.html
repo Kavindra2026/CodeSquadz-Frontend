@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .status
+    {
+        width: 100%;
+        height: auto;
+        border-bottom: 5px solid red;
+    }
+    .status h1{
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        color:white;
+        padding:10px;
+        display: inline-block;
+        background-color: black;
+    }
+    .page
+    {
+        border:1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .page div
+    {
+        width: 200px;
+        height: auto;
+        padding:10px;
+        margin:10px;
+        background-color: rgb(8, 64, 45);
+        color:white;
+    }
+</style>
+
+</head>
+<body>
+<div class="status">
+<h1></h1>
+<h1></h1>
+<h1></h1>
+</div>
+<section class="page">
+   
+</section>
+    
+<script>
+    function apidata()
+    {
+        var jtext = document.querySelectorAll('h1');
+        var jpage = document.querySelector('.page');
+        var mydata = fetch('https://dummyjson.com/users').then((d)=>{
+           return d.json()
+        }).then((myd)=>{
+            console.log(myd);
+            jtext[0].innerHTML=`Total : ${myd.total}`;
+            jtext[1].innerHTML=`Skip : ${myd.skip}`;
+            jtext[2].innerHTML=`Limit : ${myd.limit}`;
+
+        var jusers = myd.users;
+        var mytemp = jusers.map((u)=>{
+            return `<div>
+                    <img src="${u.image}">
+                    <p>userId: ${u.id}</p>
+                    <p>Email: ${u.email}</p>
+                    <p>Phone: ${u.phone}</p>
+                    <hr>
+                    <p>Address: ${u.address.city} , ${u.address.country}</p>
+                    
+                </div>`
+        });
+        jpage.innerHTML=mytemp.join("");
+
+        });
+      
+    }
+    apidata();
+
+    
+
+
+</script>
+
+
+</body>
+</html>

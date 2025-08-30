@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="change background" onclick="changeColor()" />
+    <script>
+      var a = ["red", "green", "Blue", "orange", "pink"];
+      var x = 0;
+      function changeColor() {
+        document.bgColor = a[x];
+        x++;
+        if (x >= a.length) {
+          x = 0;
+        }
+      }
+      changeColor();
+      setInterval(changeColor, 1000);
+    </script>
+  </body>
+</html>

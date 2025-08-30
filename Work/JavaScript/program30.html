@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 100px;
+            width: 400px;
+            display: inline-block;
+            letter-spacing: 20px;
+
+        }
+
+        .myinputcap input {
+            padding: 10px;
+            width: 30px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        input[type="button"]
+        {
+            padding:10px;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <input type="image" src="https://cdn-icons-png.flaticon.com/512/17105/17105803.png" width="40"
+        onclick="capgenerage()">
+    <hr>
+    <div class="myinputcap">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+        <input type="text" maxlength="1">
+    </div>
+    <input type="button" value="varify" >
+    <script>
+
+
+        function capgenerage() {
+            var c = Math;
+            var jtext = document.querySelector('h1');
+            var cap = parseInt((Math.random() + 1) * 4235);
+            var t;
+            if (cap >= 8000) {
+                t = "Y";
+            }
+            else if (cap >= 6000) {
+                t = "P";
+            }
+            else if (cap >= 5000) {
+                t = "A";
+            }
+            else {
+                t = "O";
+            }
+            var gcap;
+            if (cap >= 6000) {
+                gcap = cap + t;
+            }
+            else {
+                gcap = t + cap;
+            }
+
+            jtext.innerHTML = gcap;
+            console.log(gcap);
+        }
+        capgenerage();
+
+        function mycap()
+        {
+            var myinput = document.querySelector('.myinputcap').children;
+            console.log(myinput);
+        }
+        mycap();
+
+
+
+    </script>
+
+</body>
+
+</html>

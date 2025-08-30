@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        ul input
+        {
+            padding:10px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> <input type="text" placeholder="username" id="user"></li>
+        <li> <input type="password" placeholder="password" id="pass"></li>
+        <li> <input type="button" value="login" onclick="loginPage()"></li>
+    </ul>
+
+
+<script>
+
+// function loginPage()
+// {
+//     var juser,jpass;
+//         juser = document.getElementById('user');
+//         jpass = document.getElementById('pass');
+//         if(juser.value=="" || jpass.value=="")
+//         {
+//             alert("please fill user and pasword");
+//         }
+//         else
+//         {
+//             alert("welcome to login page");
+//             window.location.href="http://google.com";
+//         }
+
+// }
+
+
+
+function loginPage()
+{
+    var juser,jpass;
+        juser = document.getElementById('user');
+        jpass = document.getElementById('pass');
+        if(juser.value=="" || jpass.value=="")
+        {
+            alert("please fill user and pasword");
+        }
+        else
+        {
+           if(juser.value=="kumar" && jpass.value=="123")
+           {
+            alert("welcome to login page");
+            window.location.href="http://google.com";
+           }
+           else
+           {
+            alert("user and password don't match!");
+           }
+        }
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

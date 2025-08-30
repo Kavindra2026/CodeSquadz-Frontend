@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        align-items: center;
+        justify-items: center;
+        margin-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="change background" onclick="changeColor()" />
+    <script>
+      var a = ["red", "green", "Blue", "orange", "pink"];
+      var x = 0;
+      function changeColor() {
+        document.bgColor = a[x];
+        x++;
+        if (x >= a.length) {
+          clearInterval(y);
+        }
+      }
+      changeColor();
+      var y = setInterval(changeColor, 1000);
+    </script>
+  </body>
+</html>

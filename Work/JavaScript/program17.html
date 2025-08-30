@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-left: 100px;
+        }
+
+        ul input {
+            padding: 5px;
+            margin: 2px;
+        }
+
+        ul p {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li> <input type="text" placeholder="username" id="user"></li>
+        <li>
+            <p>user invalid</p>
+        </li>
+        <li> <input type="password" placeholder="password" id="pass"></li>
+        <li>
+            <p>user invalid</p>
+        </li>
+        <li> <input type="button" value="login" onclick="validation()"></li>
+    </ul>
+
+
+    <script>
+        var err, jinput;
+        function loadallobject() {
+            err = document.querySelectorAll('p');
+            jinput = document.querySelectorAll('input');
+        }
+        loadallobject();
+
+
+        function validation() {
+            if (jinput[0].value == "") {
+                err[0].style.display = "block";
+            }
+            if (jinput[1].value == "") {
+                err[1].style.display = "block";
+            }
+            validfunc();
+            
+        }
+
+        jinput[0].addEventListener("input", () => {
+            err[0].removeAttribute('style');
+        });
+
+        jinput[1].addEventListener("input", () => {
+            err[1].removeAttribute('style');
+        })
+
+
+function validfunc()
+{
+    if(jinput[0].value!=0 && jinput[1].value!=0)
+{
+    window.location.href="program16.html";
+}
+}
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

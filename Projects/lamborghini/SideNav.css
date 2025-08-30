@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+}
+
+main {
+  background-image: url('./image/lamborghini.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+}
+
+/* ======================================      Header        ========================================= */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 75px;
+  box-shadow: 0 0 5px black;
+}
+
+header img {
+  width: 90px;
+  height: 75px;
+  padding: 5px 0;
+  margin-left: 20px;
+}
+
+.header-links {
+  display: flex;
+  text-decoration: none;
+}
+
+.header-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.header-links ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.header-links ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(255, 255, 41);
+}
+
+.header-links li:hover {
+  border-radius: 10px;
+  background-color: rgb(71, 188, 71);
+}
+
+.left-links {
+  margin-left: 15px;
+}
+
+.right-links {
+  font-size: 18px;
+  margin-left: 450px;
+  color: rgb(20, 48, 20);
+}
+
+.right-links i {
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+/* ======================================      Sidbar        ========================================= */
+.sidebar {
+  left: 0;
+  bottom: 0;
+  display: flex;
+  height: 89.6vh;
+  width: 63px;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px black;
+  padding: 25px 0;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar-links ul {
+  color: rgb(92, 255, 92);
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+.sidebar-links ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px 0 0 10px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-links ul li i {
+  font-size: 25px;
+  min-width: 25px;
+  margin-left: 7px;
+}
+
+.sidebar-links li a {
+  visibility: hidden;
+  padding-left: 15px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: rgb(255, 255, 41);
+  font-weight: 800;
+  transition: max-width 0.2s;
+}
+
+.sidebar:hover li a {
+  visibility: visible;
+}
+
+.sidebar-links li:hover {
+  border-radius: 10px 0 0 10px;
+  background-color: rgb(75, 227, 75);
+  color: white;
+}
+
+
+
+/*===================================       MEGA MENU       ======================================*/
+.header-links ul li {
+  position: relative;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 65px;
+  border: 3px solid green;
+  background-color: rgb(198, 198, 237);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.mega-menu ul {
+  list-style-type: none;
+  margin: 10px 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu ul li {
+  flex: 1;
+
+}
+
+.mega-menu ul li a {
+  text-decoration: none;
+  color: rgb(21, 208, 233);
+  background-color: green;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* .mega-menu ul li a:hover{
+  border: 3px solid rgb(172, 135, 0);
+}  */
+
+.header-links ul li:hover .mega-menu {
+  display: block;
+  transition-duration: 0.2s;
+}
+
+
+/*========================================    User Detail     ========================================= */
+.user {
+  display: flex;
+  width: 200px;
+  margin-top: 300px;
+  align-items: center;
+  color: rgb(92, 255, 92);
+  margin-left: 2px;
+  padding-bottom: 20px;
+}
+
+.user i {
+  margin-top: 12px;
+  color: black;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-left: 18px;
+}
+
+.user-detail {
+  color: rgb(0, 0, 0);
+}
+
+.user h3 {
+  padding: 10px 10px 0 12px;
+  font-size: 23px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.user span {
+  padding-left: 13px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.user:hover {
+  background-color: aqua;
+  border-radius: 10px 0 0 10px;
+  transition: background-color 0.2s;
+}
+
+/*==========================================   Contain     ========================================= */
+
+.contain {
+  width: 98%;
+  height: auto;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.page-1 {
+  margin-left: 50px;
+  color: white;
+  font-weight: 900;
+  margin-top: 11%;
+  animation: xyz 2s ease-out infinite;
+}
+
+.page-1 h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.page-1 h1 {
+  font-size: 90px;
+  font-weight: 900;
+}
+
+@keyframes xyz {
+  0% {
+    opacity: -1;
+    transform: translateX(-500px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

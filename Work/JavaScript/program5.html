@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+
+    <script>
+      //   var ele = document.querySelector('p');
+      //   var mytext = `a versatile, high-level, interpreted
+      //    programming language primarily used for adding
+      //   interactivity and dynamic behavior to
+      //   web pages, alongside HTML
+      //    and CSS.`;
+      //   console.log(mytext);
+      //   ele.innerText=mytext;
+
+      var name = "Kavindra";
+      var age = 30;
+      var phone = "4125454";
+      var working = true;
+
+      var ele = document.querySelectorAll("p");
+      // var myletter = "my name is "+name+",and age is:"+age+" and phono:"+phone+" and working status:"+working+"sdfsdf";
+      var myletter = `my name is ${name},and age is:${age} and phono: ${phone}and working status:${working}sdfsdf`;
+      ele[0].innerText = myletter;
+    </script>
+  </body>
+</html>

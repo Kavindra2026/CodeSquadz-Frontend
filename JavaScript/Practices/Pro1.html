@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="one">This is a text1</p>
+  <p>This is a text2</p>
+  <p>This is a text3</p>
+  <p>This is a text4</p>
+  <input type="text">
+  <input type="button" value="btn" onclick="dom()"></input>
+  <input type="button" value="btn2" onclick="dom2()"></input>
+
+
+  <Script>
+    function dom() {
+      var a = document.querySelector("p");
+      a.innerHTML = "Chutiya hia Rashid bhai";
+      console.log(a);
+    }
+    function dom2() {
+      var a = document.querySelectorAll("p, input");
+      a[4].value = "Kavindra";
+      console.log(a);
+      a[1].innerHTML = "this is mytext <span>sdkfjsdhfjsdhf</span> <hr>";
+      console.log(a);
+
+    }
+  </Script>
+</body>
+
+</html>

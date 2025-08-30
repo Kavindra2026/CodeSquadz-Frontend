@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(199, 241, 241);
+}
+
+.nav {
+  padding-bottom: 10px;
+  color: white;
+  background-color: blue;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 10px 20px 0 50px;
+}
+
+.input-box {
+  position: relative;
+  display: inline-block;
+}
+
+.input-box input {
+  font-size: 20px;
+  width: 400px;
+  height: 30px;
+  padding-left: 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-box input:focus {
+  border: 2px solid blue;
+}
+
+ul>li>i {
+  padding-right: 10px;
+}
+
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 6px;
+  color: gray;
+}
+
+ul {
+  display: flex;
+  width: 50%;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+li {
+  padding-left: 100px;
+}
+
+li:hover {
+  color: orange !important;
+}
+
+.nav2 {
+  display: flex;
+  padding: 10px 50px 0 50px;
+  justify-content: space-around;
+}
+
+.nav2 a:hover {
+  color: orange;
+}
+
+.nav2>a {
+  color: white;
+}
+
+.hero {
+  padding: 0 25px;
+}
+
+section {
+  flex: 1;
+}
+
+section>a {
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.discount {
+  padding: 20px;
+  text-align: center;
+}
+
+.onebox>img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.twoBox {
+  display: flex;
+  flex: 1;
+}
+
+.twoBox>section {
+  padding: 20px;
+  background-color: rgb(246, 247, 247);
+  border: 1px solid rgb(225, 219, 219);
+}
+
+.twoBox>section>p {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.twoBox>a,
+p {
+  color: black;
+}
+
+.threebox {
+  display: flex;
+  margin: 5px;
+}
+
+.threebox>section {
+  margin-top: 20px;
+  margin: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+section>h3 {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  background-color: rgb(238, 229, 229);
+}
+
+.threebox>section>p {
+  padding: 10px;
+  color: blue;
+  background-color: rgb(238, 229, 229);
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.threebox section:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.fourbox>h2 {
+  padding: 50px 0 0px 20px;
+}
+
+.fifth>section {
+  margin: 10px;
+  align-items: center;
+}
+
+.fifth>section:hover {
+  text-decoration: underline;
+  color: blue;
+  border: 2px solid;
+}
+
+.fifth>section>img {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.fifth>section>p {
+  text-align: center;
+}
+
+
+/* -----------------------------------------     Mediaquery     --------------------------------------- */
+
+@media (max-width: 768px) {
+  .nav1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .input-box {
+    width: 90%;
+  }
+
+  .twoBox {
+    flex-direction: column;
+  }
+
+  .threebox {
+    flex-direction: column;
+  }
+}

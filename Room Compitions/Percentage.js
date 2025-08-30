@@ -1,0 +1,10 @@
+var Hindi = parseFloat(prompt("Enter Hindi"));
+var English = parseFloat(prompt("Enter English"));
+var Mathe = parseFloat(prompt("Enter Mathe"));
+var SOS = parseFloat(prompt("Enter Social "));
+var Science = parseFloat(prompt("Enter Science"));
+var Computer = parseFloat(prompt("Enter Computer"));
+var Total = Hindi + English + Mathe + SOS + Science + Computer;
+console.log("Total : " + Total);
+var Percentage = Total / 6;
+console.log(Percentage);

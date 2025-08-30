@@ -1,0 +1,68 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  margin-top: 60px;
+  width: 800px;
+  height: 500px;
+  text-align: center;
+  background-color: rgb(178, 231, 231);
+  border-radius: 10px;
+  box-shadow: 6px 8px 9px 4px black;
+}
+
+h1 {
+font-size: 50px;
+  margin-top: 80px;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 80px;
+}
+
+input {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+.decrement {
+  background-color: rgb(42, 185, 42);
+  color: white;
+}
+.decrement:hover {
+  background-color: rgb(19, 154, 19);
+
+}
+
+.reset {
+  background-color: rgb(247, 71, 43);
+  color: white;
+}
+.reset:hover {
+  background-color:red;
+}
+
+.increment {
+  background-color: rgb(59, 72, 222);
+  color: white;
+}
+.increment:hover {
+  background-color: blue;
+  color: white;
+}
+
+input:hover{
+  scale: 1.01;
+  box-shadow: 1px 1px 4px 2px black ;
+}

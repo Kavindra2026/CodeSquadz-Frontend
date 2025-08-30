@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one
+        {
+            color:orange;
+            padding:10px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .two
+        {
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        .three
+        {
+            text-shadow: 2px 5px 5px black;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color:red">use of css style</h1>
+<h1>this is second heading</h1>
+<h1>this is second heading1</h1>
+<h1>this is second heading2</h1>
+
+<script>
+var obj = document.querySelectorAll('h1');
+
+obj[1].addEventListener("click",()=>{
+    obj[1].style.color="green";
+    obj[1].style.backgroundColor="orange";
+})
+
+
+obj[2].addEventListener("click",()=>{
+    
+    obj[2].className="one";
+})
+
+
+obj[3].addEventListener("click",()=>{
+    
+    obj[3].classList.add("one","two","three");
+});
+
+obj[3].addEventListener("dblclick",()=>{
+    
+    obj[3].classList.remove("three");
+});
+
+
+
+</script>
+    
+</body>
+</html>

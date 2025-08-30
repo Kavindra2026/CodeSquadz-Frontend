@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.0" />
+    <title>Document</title>
+    <style>
+      .one {
+        color: rgb(33, 205, 133);
+        padding: 00px;
+        text-align: center;
+        background-color: aqua;
+      }
+      .two {
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+      .three {
+        text-shadow: 1px 5px 5xp black;
+        border: red;
+        color: rgb(080, 012, 125);
+      }
+      .four {
+        text-decoration-color: chartreuse;
+        color: rgb(236, 59, 168);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a one heading</h1>
+    <h1>This is a two heading</h1>
+    <h1>This is a three heading</h1>
+    <h1>This is a four heading</h1>
+
+    <script>
+      var obj = document.querySelectorAll("h1");
+
+      obj[0].addEventListener("click", () => {
+
+        obj[0].style.backgroundColor = "orange";
+      });
+
+      obj[1].addEventListener("click", () => {
+        obj[1].className = "two";
+      });
+
+      obj[2].addEventListener("click", () => {
+        obj[2].classList="one", "two", "three";
+      });
+      obj[3].addEventListener("click", () => {
+        obj[3].className="four";
+      });
+    </script>
+  </body>
+</html>

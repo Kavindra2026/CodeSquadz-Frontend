@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      input,
+      select {
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" title="username" placeholder="enter user" maxlength="20"
+      id="one"
+    />
+    <input type="button" value="submit" onclick="mysub()" />
+
+    <script>
+      function mysub() {
+        // var a = document.querySelectorAll('input');
+        // console.log(a[0].id);
+        var a = document.getElementById("one");
+        console.log(a.type);
+        console.log(a.value);
+        console.log(a.placeholder);
+        console.log(a.title);
+      }
+    </script>
+  </body>
+</html>

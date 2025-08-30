@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      var date = new Date();
+      var day = date.getDay();
+      var month = date.getMonth();
+      var year = date.getFullYear();
+      var customDate = document.querySelector("h1");
+      customDate.innerHTML = `${day}:${month + 1}:${year}`;
+    </script>
+  </body>
+</html>

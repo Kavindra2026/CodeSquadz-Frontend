@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p></p>
+<button onclick="loadpage()">reload page</button>
+<button onclick="mylocation()">get location</button>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+<script>
+    var jp;
+function myinfo()
+{
+    jp = document.querySelectorAll('p');
+    var jlocation = location;
+    var jnav = window.navigator;
+    var  jhis = window.history;
+    var jscreen = screen;
+    jp[0].innerHTML=jlocation.href;
+    jp[1].innerHTML=jnav.appVersion;
+    jp[2].innerHTML=jnav.userAgentData.platform;
+    jp[4].innerHTML=jhis.length;
+    jp[5].innerHTML=`width: ${jscreen.width} // height: ${jscreen.height}`;
+    console.log(jnav);
+}
+
+myinfo();
+
+function loadpage()
+{
+    window.location.reload();
+}
+
+
+function mylocation()
+{
+    window.navigator.geolocation.getCurrentPosition((d)=>{
+        console.log(d);
+        jp[3].innerHTML=`lat:${d.coords.latitude}  // lon:${d.coords.longitude} `;
+    });
+}
+
+    var plat="";
+function myswitch()
+{
+     plat = navigator.userAgentData.platform;
+    switch(plat)
+    {
+        case "Windows":
+            myplat();
+            getver();
+            break;
+        case "Android":
+            myplat()
+            break;
+        default:
+            alert("other plateform");
+
+    }    
+}
+myswitch();
+
+function myplat()
+{
+    alert("your plate is :"+ plat);
+
+}
+
+function getver()
+{
+    alert(window.navigator.appVersion);
+    
+}
+
+
+</script>
+    
+</body>
+</html>

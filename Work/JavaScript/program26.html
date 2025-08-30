@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style-type: none;
+        }
+        ul input
+        {
+            padding:5px;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><input type="text" placeholder="fullname"></li>
+    <li><input type="email" placeholder="email"></li>
+    <li><input type="text" placeholder="phone"></li>
+    <li><input type="date"></li>
+    <li><input type="button" value="submit"></li>
+</ul>
+
+<button type="button" onclick="getalldata()">getlocal data</button>
+<table border="1" align="center" width="800">
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>fulllname</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody id="disdata">
+       
+    </tbody>
+
+</table>
+
+<script>
+var allinput = document.querySelectorAll('input');
+
+var mydata = [];
+allinput[4].addEventListener("click",()=>{
+    
+    mydata.unshift({sfullname:allinput[0].value,
+        semail:allinput[1].value,
+        sphone:allinput[2].value,
+        sdate:allinput[3].value});
+    // console.log(mydata);
+    localStorage.setItem("localdata",JSON.stringify(mydata));
+    sessionStorage.setItem("sessiondata",JSON.stringify(mydata));
+    getalldata();
+});
+
+
+function getalldata()
+{
+    var localdataget =JSON.parse(localStorage.getItem('localdata'));
+    var jtbody = document.getElementById('disdata');
+    console.log(localdataget);
+    var mytemp = localdataget.map((d,s)=>{
+        return ` <tr>
+            <td>${++s}</td>
+            <td>${d.sfullname}</td>
+            <td>${d.semail}</td>
+            <td>${d.sphone}</td>
+            <td>${d.sdate}</td>
+        </tr>`;
+    });
+
+    jtbody.innerHTML=mytemp.join("");
+
+
+
+}
+
+getalldata();
+
+
+
+</script>
+
+    
+</body>
+</html>

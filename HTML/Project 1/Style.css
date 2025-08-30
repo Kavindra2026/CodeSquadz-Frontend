@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {}
+
+.Body {
+  padding: 30px;
+
+}
+
+.header {
+  background-color: rgb(236, 97, 46);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  padding: 20px;
+  background-color: rgb(236, 97, 46);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.div {
+  width: 80px;
+  height: 30px;
+  background-color: aliceblue;
+  margin: 10px;
+}
+
+h4 {
+  padding-top: 15px;
+  font-size: 20px;
+
+}
